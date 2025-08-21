@@ -1,3 +1,4 @@
+-- “Note: Full implementation omitted due to UPS confidentiality policies.”
 -- SQL snippet to analyze Wi-Fi coverage across logistics zones
 -- Sanitized for confidentiality
 

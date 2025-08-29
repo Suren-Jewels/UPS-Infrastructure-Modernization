@@ -5,7 +5,7 @@
 **Duration**: Jan 2023 – May 2023
 
 ## 🛠️ Contributions
-- Led VoIP system upgrades across 200+ sites, reducing communication costs by 20%  
+- Led VoIP system upgrades across 10+ sites, reducing communication costs by 20%  
 - Deployed Wi-Fi expansion plans, boosting coverage by 30% in logistics zones  
 - Automated network provisioning and compliance checks using PowerShell and SQL  
 - Coordinated with UPS IT and field teams to ensure zero downtime during rollout

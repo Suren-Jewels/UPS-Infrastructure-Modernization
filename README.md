@@ -21,7 +21,7 @@ PowerShell • SQL • Intune • Jamf • Cisco Meraki • ServiceNow
 - **ServiceNow** – for change tracking and rollout coordination
 
 ## 📈 Outcome
-Reduced communication costs by 20%, improved Wi-Fi coverage by 30%, and ensured full compliance across 200+ UPS sites with zero service disruption.
+Reduced communication costs by 20%, improved Wi-Fi coverage by 30%, and ensured full compliance across ~10 UPS sites with zero service disruption.
 
 ## 📘 Summary
 This repo documents infrastructure modernization efforts at UPS, including VoIP upgrades, Wi-Fi expansion, and automation workflows.  

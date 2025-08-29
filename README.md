@@ -1,7 +1,7 @@
 # 📡 UPS Infrastructure Modernization
 
 **Role**: Infrastructure Automation & Network Engineer  
-**Scope**: 200+ UPS facilities across North America  
+**Scope**: ~10 UPS facilities across North West America  
 **Duration**: Jan 2023 – May 2023
 
 ## 🛠️ Contributions

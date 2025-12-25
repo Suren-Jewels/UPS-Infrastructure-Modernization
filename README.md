@@ -208,9 +208,15 @@ All sensitive information has been removed in accordance with UPS security polic
 
 ---
 
-## 👔 Professional Context
-**Suren Jewels**  
-Senior Cloud Engineer | Infrastructure & Security Specialist  
+## 👔 Professional Context  
 
-For professional inquiries, connect via LinkedIn:  
-https://www.linkedin.com/in/suren-jewels/
+**Suren Jewels**  
+Cloud & Infrastructure Engineer • Security & Automation Specialist  
+
+This repository showcases sanitized engineering patterns and automation workflows used in enterprise ServiceNow environments.
+
+- **LinkedIn:** [https://www.linkedin.com/in/suren-jewels/](https://www.linkedin.com/in/suren-jewels/)
+- **GitHub:** [https://github.com/Suren-Jewels](https://github.com/Suren-Jewels)
+- **Email:** [SurenJewelsPro@gmail.com](mailto:SurenJewelsPro@gmail.com)
+
+---

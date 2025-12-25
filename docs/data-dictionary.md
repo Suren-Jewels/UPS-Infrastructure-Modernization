@@ -1,8 +1,14 @@
 # 📚 Data Dictionary  
 **UPS Infrastructure Modernization Program — Terminology & Definitions**
 
-This data dictionary defines key terms, components, and systems referenced throughout the modernization program.  
+This data dictionary defines key terms used across the modernization program.  
 It ensures consistent understanding across engineering, IT, OT, and field operations teams.
+
+For architectural context, see:  
+- 🧱 [Architecture Layers](../architecture/architecture-layers.md)  
+- 🗺️ [Network Topology](../architecture/network-topology.md)  
+- 📊 [Architecture Diagram](../architecture/architecture-diagram.md)  
+- 📝 [Architecture Summary](../architecture/architecture-summary.md)
 
 ---
 
@@ -18,6 +24,10 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **Runtime** | Estimated minutes of power available during an outage. |
 | **Load Percentage** | Percentage of UPS capacity currently in use. |
 
+Related docs:  
+- ⚡ [UPS Modernization Playbook](ups-modernization-playbook.md)  
+- 📡 [Monitoring & Telemetry](../architecture/architecture-layers.md)
+
 ---
 
 ## 🌐 Network Terminology
@@ -31,6 +41,10 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **PoE** | Power over Ethernet used for cameras, VoIP phones, sensors. |
 | **DHCP Scope** | IP address range assigned to devices in a VLAN. |
 
+Related docs:  
+- 📶 [Wi‑Fi Expansion Guide](wifi-expansion-guide.md)  
+- 🌐 [Network Topology](../architecture/network-topology.md)
+
 ---
 
 ## ☎️ Voice & Communication Terminology
@@ -42,6 +56,9 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **QoS** | Quality of Service rules prioritizing voice traffic. |
 | **Voice VLAN** | Segmented network for VoIP phones. |
 
+Related docs:  
+- ☎️ [VoIP Migration Guide](voip-migration-guide.md)
+
 ---
 
 ## 🎥 Security & Surveillance Terminology
@@ -52,6 +69,9 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **NVR** | Network Video Recorder storing camera footage. |
 | **Camera VLAN** | Segmented network for surveillance devices. |
 
+Related docs:  
+- 🎥 [Camera Support Runbook](camera-support-runbook.md)
+
 ---
 
 ## 🏭 OT (Operational Technology) Terminology
@@ -61,6 +81,10 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **SICK Laser** | Industrial scanner used for conveyor alignment and detection. |
 | **Encoder** | Device measuring conveyor movement and position. |
 | **OT VLAN** | Segmented network for industrial devices. |
+
+Related docs:  
+- 🏭 [SICK Laser Maintenance](sick-laser-maintenance.md)  
+- 📏 [Encoder Support Guide](encoder-support-guide.md)
 
 ---
 
@@ -73,6 +97,9 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **Imaging** | Standardized OS deployment process. |
 | **Enrollment** | Adding a device to Intune or Jamf for policy enforcement. |
 
+Related docs:  
+- 🖥️ [Remote Support Procedures](remote-support-procedures.md)
+
 ---
 
 ## 📡 Monitoring Terminology
@@ -82,6 +109,10 @@ It ensures consistent understanding across engineering, IT, OT, and field operat
 | **SNMP Polling** | Automated collection of UPS and network telemetry. |
 | **Alert Threshold** | Trigger point for warnings (temperature, runtime, voltage). |
 | **Dashboard** | Centralized monitoring interface (sanitized). |
+
+Related scripts:  
+- 📜 `ups-health-check.ps1`  
+- 📜 `snmp-telemetry-poll.py`  
 
 ---
 

@@ -87,7 +87,7 @@ The result was a measurable improvement in facility performance, safety, and ope
 | 🎥 **Security Systems** | IP cameras, NVR systems, PoE | Facility surveillance modernization |
 | 🖨️ **Print Services** | Network printers, drivers | Standardized print workflows |
 | 🖥️ **Provisioning** | Intune, Jamf, imaging | Server/PC/laptop deployment |
-| ⚙️ **Automation** | PowerShell, Bash, SQL | Compliance checks, provisioning, telemetry |
+| ⚙️ **Automation** | PowerShell, Bash, Python, SQL | Compliance checks, provisioning, telemetry |
 | 🧰 **Operations** | ServiceNow, remote support tools | Change management & field coordination |
 
 ---
@@ -111,7 +111,8 @@ UPS-Infrastructure-Modernization/
 │   ├── camera-support-runbook.md
 │   ├── sick-laser-maintenance.md
 │   ├── encoder-support-guide.md
-│   └── remote-support-procedures.md
+│   ├── remote-support-procedures.md
+│   └── troubleshooting-guide.md
 │
 ├── config/
 │   ├── ups-monitoring-template.md
@@ -119,30 +120,51 @@ UPS-Infrastructure-Modernization/
 │   ├── wifi-baseline-template.md
 │   ├── voip-qos-template.md
 │   ├── printer-standardization-template.md
-│   └── device-provisioning-checklist.md
+│   ├── device-provisioning-checklist.md
+│   ├── change-control-template.md
+│   └── site-baseline-template.md
 │
 ├── scripts/
-│   ├── ups-health-check.ps1
-│   ├── snmp-telemetry-poll.py
-│   ├── wifi-coverage-scan.sh
-│   ├── voip-qos-validator.ps1
-│   ├── device-provisioning.ps1
-│   └── signal-check.sh
+│   ├── monitoring/
+│   │   ├── ups-health-check.ps1
+│   │   ├── snmp-telemetry-poll.py
+│   │   └── camera-bitrate-audit.py
+│   │
+│   ├── network/
+│   │   ├── switch-port-validator.ps1
+│   │   ├── vlan-audit.ps1
+│   │   ├── wifi-coverage-scan.sh
+│   │   └── wifi-coverage-analysis.sql
+│   │
+│   ├── voip/
+│   │   ├── voip-qos-validator.ps1
+│   │   └── voip-upgrade-plan.ps1
+│   │
+│   ├── ot/
+│   │   ├── encoder-pulse-check.py
+│   │   └── sick-laser-alignment-check.py
+│   │
+│   ├── provisioning/
+│   │   └── device-provisioning.ps1
+│   │
+│   └── utils/
+│       ├── log-collector.ps1
+│       └── site-baseline-export.py
 │
 └── README.md
 ```
 
 ---
 
-### ▣ Key Files
+## ▣ Key Files
 
-#### 📐 Architecture  
+### 📐 Architecture  
 - [`modernization-overview.md`](architecture/modernization-overview.md)  
 - [`multi-site-deployment-diagram.md`](architecture/multi-site-deployment-diagram.md)  
 - [`network-topology.md`](architecture/network-topology.md)  
 - [`power-architecture.md`](architecture/power-architecture.md)  
 
-#### 📄 Documentation  
+### 📄 Documentation  
 - [`deployment-overview.md`](docs/deployment-overview.md)  
 - [`ups-modernization-playbook.md`](docs/ups-modernization-playbook.md)  
 - [`wifi-expansion-guide.md`](docs/wifi-expansion-guide.md)  
@@ -151,22 +173,45 @@ UPS-Infrastructure-Modernization/
 - [`sick-laser-maintenance.md`](docs/sick-laser-maintenance.md)  
 - [`encoder-support-guide.md`](docs/encoder-support-guide.md)  
 - [`remote-support-procedures.md`](docs/remote-support-procedures.md)  
+- [`troubleshooting-guide.md`](docs/troubleshooting-guide.md)  
 
-#### ⚙ Configuration  
+### ⚙ Configuration  
 - [`ups-monitoring-template.md`](config/ups-monitoring-template.md)  
 - [`snmp-profile-template.md`](config/snmp-profile-template.md)  
 - [`wifi-baseline-template.md`](config/wifi-baseline-template.md)  
 - [`voip-qos-template.md`](config/voip-qos-template.md)  
 - [`printer-standardization-template.md`](config/printer-standardization-template.md)  
 - [`device-provisioning-checklist.md`](config/device-provisioning-checklist.md)  
+- [`change-control-template.md`](config/change-control-template.md)  
+- [`site-baseline-template.md`](config/site-baseline-template.md)  
 
-#### 🧰 Scripts  
-- [`ups-health-check.ps1`](scripts/ups-health-check.ps1)  
-- [`snmp-telemetry-poll.py`](scripts/snmp-telemetry-poll.py)  
-- [`wifi-coverage-scan.sh`](scripts/wifi-coverage-scan.sh)  
-- [`voip-qos-validator.ps1`](scripts/voip-qos-validator.ps1)  
-- [`device-provisioning.ps1`](scripts/device-provisioning.ps1)  
-- [`signal-check.sh`](scripts/signal-check.sh)  
+### 🧰 Scripts  
+
+#### 🔍 Monitoring  
+- [`ups-health-check.ps1`](scripts/monitoring/ups-health-check.ps1)  
+- [`snmp-telemetry-poll.py`](scripts/monitoring/snmp-telemetry-poll.py)  
+- [`camera-bitrate-audit.py`](scripts/monitoring/camera-bitrate-audit.py)  
+
+#### 📡 Networking  
+- [`switch-port-validator.ps1`](scripts/network/switch-port-validator.ps1)  
+- [`vlan-audit.ps1`](scripts/network/vlan-audit.ps1)  
+- [`wifi-coverage-scan.sh`](scripts/network/wifi-coverage-scan.sh)  
+- [`wifi-coverage-analysis.sql`](scripts/network/wifi-coverage-analysis.sql)  
+
+#### ☎️ VoIP  
+- [`voip-qos-validator.ps1`](scripts/voip/voip-qos-validator.ps1)  
+- [`voip-upgrade-plan.ps1`](scripts/voip/voip-upgrade-plan.ps1)  
+
+#### 🏭 OT (Operational Technology)  
+- [`encoder-pulse-check.py`](scripts/ot/encoder-pulse-check.py)  
+- [`sick-laser-alignment-check.py`](scripts/ot/sick-laser-alignment-check.py)  
+
+#### 🖥️ Provisioning  
+- [`device-provisioning.ps1`](scripts/provisioning/device-provisioning.ps1)  
+
+#### 🧰 Utilities  
+- [`log-collector.ps1`](scripts/utils/log-collector.ps1)  
+- [`site-baseline-export.py`](scripts/utils/site-baseline-export.py)  
 
 ---
 
@@ -215,8 +260,6 @@ Cloud & Infrastructure Engineer • Security & Automation Specialist
 
 This repository showcases sanitized engineering patterns and automation workflows used in enterprise ServiceNow environments.
 
-- **LinkedIn:** [https://www.linkedin.com/in/suren-jewels/](https://www.linkedin.com/in/suren-jewels/)
-- **GitHub:** [https://github.com/Suren-Jewels](https://github.com/Suren-Jewels)
-- **Email:** [SurenJewelsPro@gmail.com](mailto:SurenJewelsPro@gmail.com)
-
----
+- **LinkedIn:** https://www.linkedin.com/in/suren-jewels/  
+- **GitHub:** https://github.com/Suren-Jewels  
+- **Email:** SurenJewelsPro@gmail.com  
